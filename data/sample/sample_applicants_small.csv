@@ -1,0 +1,11 @@
+Applicant ID,Age,Marital Status,Dependents,Residential Status,Employment Type,Employer Category,Years of Employment,Monthly Income,Additional Income,Employment Stability,Monthly Expenses,Existing EMI,Number of Active Loans,Bank Balance,Savings,Credit Score,Number of Previous Loans,Previous Defaults,Delayed Payments (2 yrs),Credit Inquiries (6 months),Credit Utilization (%),Outstanding Debt,Credit History (years),Loan Amount,Loan Tenure (months),Interest Rate (%),Loan Purpose,Expected EMI
+LA1001,40,Married,3,Owned,Salaried,Manufacturing,19.9,118200.0,6800.0,Stable,64900.0,0.0,4,117700.0,170300.0,718.0,9,1,1,1,32.6,306800.0,16.7,200000.0,36,13.38,education,6775.0
+LA1002,56,Divorced,3,Other,Self-employed,Retail trade,8.3,91200.0,0.0,Moderate,57100.0,0.0,4,466800.0,0.0,725.0,21,0,1,0,41.6,141600.0,32.5,220000.0,48,15.16,other,6141.0
+LA1003,51,Single,0,Rented,Salaried,IT / Software,6.2,51400.0,0.0,Stable,27000.0,0.0,3,191800.0,0.0,696.0,14,0,1,0,69.8,229200.0,25.4,150000.0,60,11.49,small_business,3298.0
+LA1004,32,Married,4,Owned,Salaried,Government,8.7,81800.0,0.0,Stable,32200.0,0.0,1,207800.0,356700.0,757.0,30,0,0,0,12.0,203400.0,8.7,220000.0,36,10.57,small_business,7158.0
+LA1005,45,Single,3,Rented,Salaried,Banking & Finance,1.3,22100.0,0.0,Stable,7400.0,0.0,2,108000.0,102000.0,674.0,10,0,1,2,52.4,9500.0,17.3,70000.0,48,15.0,education,1948.0
+LA1006,57,Single,2,Other,Self-employed,Transport,14.5,47600.0,0.0,Unstable,20100.0,3200.0,6,282800.0,110900.0,,14,0,0,0,37.4,25100.0,29.9,240000.0,36,10.84,major_purchase,7839.0
+LA1007,59,Single,2,Mortgaged,Business,Hospitality,4.6,63200.0,0.0,Stable,34300.0,0.0,5,359600.0,203100.0,787.0,30,0,0,1,53.1,221500.0,37.9,90000.0,36,14.29,home_improvement,3089.0
+LA1008,34,Single,3,Owned,Salaried,Retail,2.3,54700.0,0.0,Stable,31000.0,0.0,3,227000.0,246700.0,695.0,25,1,0,1,46.6,128100.0,11.6,160000.0,36,12.24,credit_card,5333.0
+LA1009,34,Single,2,Owned,Self-employed,Construction,7.5,169800.0,0.0,Moderate,70500.0,39500.0,4,332000.0,454500.0,720.0,5,0,0,0,17.3,99400.0,5.4,170000.0,48,12.47,credit_card,4516.0
+LA1010,24,Widowed,4,Mortgaged,Salaried,Healthcare,4.0,65200.0,0.0,Unstable,30300.0,16200.0,4,389100.0,189200.0,658.0,32,1,0,0,61.3,275800.0,2.7,100000.0,36,14.5,major_purchase,3442.0

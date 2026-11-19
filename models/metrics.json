@@ -1,0 +1,743 @@
+{
+  "meta": {
+    "model_name": "XGBoost",
+    "trained_at": "2026-11-19T19:24:06+00:00",
+    "dataset": "LendingClub accepted loans 2007-2018Q4 (Kaggle: wordsforthewise/lending-club)",
+    "n_train": 90000,
+    "n_valid": 30000,
+    "n_test": 30000,
+    "n_eligible": null,
+    "default_rate": 0.14866,
+    "features": [
+      "credit_score",
+      "interest_rate",
+      "loan_tenure_months",
+      "dti_ratio",
+      "loan_to_income",
+      "emi_to_income",
+      "debt_to_annual_income",
+      "credit_utilization",
+      "credit_history_years",
+      "employment_years",
+      "delayed_payments_2y",
+      "recent_inquiries",
+      "active_loans",
+      "previous_loans",
+      "previous_defaults",
+      "bankruptcies",
+      "mortgage_accounts",
+      "residential_status",
+      "loan_purpose"
+    ],
+    "random_state": 42,
+    "calibration": "sigmoid (Platt) on validation set"
+  },
+  "selection_rule": "highest mean(CV ROC-AUC, validation ROC-AUC) rounded to 3dp, ties broken by lower calibrated validation Brier score; the monotonic-constrained XGBoost is preferred if it is within 0.005 AUC of the leader (about one CV standard deviation), because its explanations are guaranteed to move in the economically expected direction",
+  "comparison": {
+    "Logistic Regression": {
+      "cv_roc_auc_mean": 0.6789223991863714,
+      "cv_roc_auc_std": 0.007039081535448597,
+      "cv_pr_auc_mean": 0.25765664528450943,
+      "cv_pr_auc_std": 0.006571532172527864,
+      "train_roc_auc": 0.6678248265241049,
+      "val_roc_auc": 0.6814125209378763,
+      "val_pr_auc": 0.264718471113524,
+      "val_brier_uncalibrated": 0.22481824094457736,
+      "val_brier_calibrated": 0.11981781573176695,
+      "fit_seconds": 2.5,
+      "generalization_gap": -0.01358769441377139
+    },
+    "Decision Tree": {
+      "cv_roc_auc_mean": 0.6595318203568584,
+      "cv_roc_auc_std": 0.003959976220607602,
+      "cv_pr_auc_mean": 0.23751133939489324,
+      "cv_pr_auc_std": 0.00540730656227403,
+      "train_roc_auc": 0.6761401404897364,
+      "val_roc_auc": 0.6666139239950699,
+      "val_pr_auc": 0.24453996516752455,
+      "val_brier_uncalibrated": 0.22841551830168694,
+      "val_brier_calibrated": 0.12099403694623562,
+      "fit_seconds": 3.0,
+      "generalization_gap": 0.00952621649466645
+    },
+    "Random Forest": {
+      "cv_roc_auc_mean": 0.6801195320160176,
+      "cv_roc_auc_std": 0.005648710022949305,
+      "cv_pr_auc_mean": 0.2571353148414711,
+      "cv_pr_auc_std": 0.005463061133870462,
+      "train_roc_auc": 0.7455132360174921,
+      "val_roc_auc": 0.685562293913355,
+      "val_pr_auc": 0.2682764629899937,
+      "val_brier_uncalibrated": 0.20926902860060137,
+      "val_brier_calibrated": 0.11947647767384002,
+      "fit_seconds": 28.6,
+      "generalization_gap": 0.059950942104137095
+    },
+    "XGBoost": {
+      "cv_roc_auc_mean": 0.6788182660731221,
+      "cv_roc_auc_std": 0.006005604300445664,
+      "cv_pr_auc_mean": 0.25724266935137374,
+      "cv_pr_auc_std": 0.008152555831067174,
+      "train_roc_auc": 0.6984015767641603,
+      "val_roc_auc": 0.6865853045078325,
+      "val_pr_auc": 0.2698329209505438,
+      "val_brier_uncalibrated": 0.2211141586303711,
+      "val_brier_calibrated": 0.11931590052829992,
+      "fit_seconds": 16.7,
+      "generalization_gap": 0.011816272256327753
+    },
+    "KNN": {
+      "cv_roc_auc_mean": 0.6654150131192476,
+      "cv_roc_auc_std": 0.007510092820910625,
+      "cv_pr_auc_mean": 0.24122591450929098,
+      "cv_pr_auc_std": 0.00710332352026872,
+      "train_roc_auc": 0.6772372384768274,
+      "val_roc_auc": 0.667350941633804,
+      "val_pr_auc": 0.2502909975227149,
+      "val_brier_uncalibrated": 0.12085732935689954,
+      "val_brier_calibrated": 0.12101625720944281,
+      "fit_seconds": 29.7,
+      "generalization_gap": 0.009886296843023334
+    },
+    "Gradient Boosting": {
+      "cv_roc_auc_mean": 0.6809929959809844,
+      "cv_roc_auc_std": 0.004529446854461706,
+      "cv_pr_auc_mean": 0.25996137167790234,
+      "cv_pr_auc_std": 0.0054895041009441784,
+      "train_roc_auc": 0.6916250701697539,
+      "val_roc_auc": 0.687374346404655,
+      "val_pr_auc": 0.27032392643343744,
+      "val_brier_uncalibrated": 0.22209584750162786,
+      "val_brier_calibrated": 0.11923944525219311,
+      "fit_seconds": 150.1,
+      "generalization_gap": 0.0042507237650989405
+    }
+  },
+  "test": {
+    "Logistic Regression": {
+      "roc_auc": 0.6819567125866047,
+      "pr_auc": 0.2603156254028696,
+      "brier": 0.11997907630647911,
+      "at_0_5": {
+        "threshold": 0.5,
+        "accuracy": 0.8511333333333333,
+        "precision": 0.46511627906976744,
+        "recall": 0.008968609865470852,
+        "f1": 0.01759788825340959,
+        "tn": 25494,
+        "fp": 46,
+        "fn": 4420,
+        "tp": 40,
+        "false_negative_rate": 0.9910313901345291,
+        "false_positive_rate": 0.0018010963194988255
+      },
+      "at_policy": {
+        "threshold": 0.25,
+        "accuracy": 0.8042,
+        "precision": 0.302734375,
+        "recall": 0.24327354260089687,
+        "f1": 0.26976628543013426,
+        "tn": 23041,
+        "fp": 2499,
+        "fn": 3375,
+        "tp": 1085,
+        "false_negative_rate": 0.7567264573991032,
+        "false_positive_rate": 0.09784651527016444
+      }
+    },
+    "Decision Tree": {
+      "roc_auc": 0.666191654873565,
+      "pr_auc": 0.24321774417627245,
+      "brier": 0.12098402472012862,
+      "at_0_5": {
+        "threshold": 0.5,
+        "accuracy": 0.8513333333333334,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tn": 25540,
+        "fp": 0,
+        "fn": 4460,
+        "tp": 0,
+        "false_negative_rate": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "at_policy": {
+        "threshold": 0.25,
+        "accuracy": 0.809,
+        "precision": 0.2870556673373575,
+        "recall": 0.19192825112107623,
+        "f1": 0.23004568664337544,
+        "tn": 23414,
+        "fp": 2126,
+        "fn": 3604,
+        "tp": 856,
+        "false_negative_rate": 0.8080717488789237,
+        "false_positive_rate": 0.08324197337509788
+      }
+    },
+    "Random Forest": {
+      "roc_auc": 0.6838653163419028,
+      "pr_auc": 0.26254428699669335,
+      "brier": 0.11964604316098044,
+      "at_0_5": {
+        "threshold": 0.5,
+        "accuracy": 0.8513333333333334,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tn": 25540,
+        "fp": 0,
+        "fn": 4460,
+        "tp": 0,
+        "false_negative_rate": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "at_policy": {
+        "threshold": 0.25,
+        "accuracy": 0.7962333333333333,
+        "precision": 0.3004105288577638,
+        "recall": 0.2789237668161435,
+        "f1": 0.2892686896872457,
+        "tn": 22643,
+        "fp": 2897,
+        "fn": 3216,
+        "tp": 1244,
+        "false_negative_rate": 0.7210762331838565,
+        "false_positive_rate": 0.11342991386061081
+      }
+    },
+    "XGBoost": {
+      "roc_auc": 0.684812731106749,
+      "pr_auc": 0.2634253192603757,
+      "brier": 0.11958566317065888,
+      "at_0_5": {
+        "threshold": 0.5,
+        "accuracy": 0.8513,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tn": 25539,
+        "fp": 1,
+        "fn": 4460,
+        "tp": 0,
+        "false_negative_rate": 1.0,
+        "false_positive_rate": 3.9154267815191856e-05
+      },
+      "at_policy": {
+        "threshold": 0.25,
+        "accuracy": 0.7925666666666666,
+        "precision": 0.29302653204977697,
+        "recall": 0.27982062780269057,
+        "f1": 0.28627136139465537,
+        "tn": 22529,
+        "fp": 3011,
+        "fn": 3212,
+        "tp": 1248,
+        "false_negative_rate": 0.7201793721973094,
+        "false_positive_rate": 0.11789350039154267
+      }
+    },
+    "KNN": {
+      "roc_auc": 0.671224843821878,
+      "pr_auc": 0.2469007391334582,
+      "brier": 0.12106864089133913,
+      "at_0_5": {
+        "threshold": 0.5,
+        "accuracy": 0.8506,
+        "precision": 0.37777777777777777,
+        "recall": 0.007623318385650224,
+        "f1": 0.014945054945054945,
+        "tn": 25484,
+        "fp": 56,
+        "fn": 4426,
+        "tp": 34,
+        "false_negative_rate": 0.9923766816143498,
+        "false_positive_rate": 0.002192638997650744
+      },
+      "at_policy": {
+        "threshold": 0.25,
+        "accuracy": 0.8077333333333333,
+        "precision": 0.29132099553286533,
+        "recall": 0.2047085201793722,
+        "f1": 0.2404529892020016,
+        "tn": 23319,
+        "fp": 2221,
+        "fn": 3547,
+        "tp": 913,
+        "false_negative_rate": 0.7952914798206278,
+        "false_positive_rate": 0.08696162881754112
+      }
+    },
+    "Gradient Boosting": {
+      "roc_auc": 0.6856763592500641,
+      "pr_auc": 0.2635184519908035,
+      "brier": 0.11953157420979253,
+      "at_0_5": {
+        "threshold": 0.5,
+        "accuracy": 0.8513333333333334,
+        "precision": 0.5,
+        "recall": 0.0008968609865470852,
+        "f1": 0.0017905102954341987,
+        "tn": 25536,
+        "fp": 4,
+        "fn": 4456,
+        "tp": 4,
+        "false_negative_rate": 0.9991031390134529,
+        "false_positive_rate": 0.00015661707126076742
+      },
+      "at_policy": {
+        "threshold": 0.25,
+        "accuracy": 0.7954333333333333,
+        "precision": 0.2945356530262191,
+        "recall": 0.2695067264573991,
+        "f1": 0.2814658705069664,
+        "tn": 22661,
+        "fp": 2879,
+        "fn": 3258,
+        "tp": 1202,
+        "false_negative_rate": 0.7304932735426009,
+        "false_positive_rate": 0.11272513703993735
+      }
+    }
+  },
+  "best": "XGBoost",
+  "test_auc_95ci": [
+    0.677624820699562,
+    0.6919075194270069
+  ],
+  "test_brier_uncalibrated": 0.22300934791564941,
+  "policy_threshold": 0.25,
+  "calibration_bins": [
+    {
+      "lo": 0.024333563729835493,
+      "hi": 0.041943877158518494,
+      "n": 1500,
+      "defaults": 33,
+      "observed": 0.022,
+      "predicted": 0.03507666156037382,
+      "ci_low": 0.015707465629169373,
+      "ci_high": 0.030734659658493903
+    },
+    {
+      "lo": 0.041943877158518494,
+      "hi": 0.05229609653803474,
+      "n": 1500,
+      "defaults": 76,
+      "observed": 0.050666666666666665,
+      "predicted": 0.04732641050582843,
+      "ci_low": 0.04067048746137049,
+      "ci_high": 0.06295851176301591
+    },
+    {
+      "lo": 0.05229609653803474,
+      "hi": 0.061426702778582865,
+      "n": 1500,
+      "defaults": 89,
+      "observed": 0.059333333333333335,
+      "predicted": 0.0567902810938909,
+      "ci_low": 0.048465588418910896,
+      "ci_high": 0.07245246571657785
+    },
+    {
+      "lo": 0.061426702778582865,
+      "hi": 0.07050609796357574,
+      "n": 1500,
+      "defaults": 105,
+      "observed": 0.07,
+      "predicted": 0.06594678724017518,
+      "ci_low": 0.058156030002077155,
+      "ci_high": 0.08404086094707601
+    },
+    {
+      "lo": 0.07050609796357574,
+      "hi": 0.07983806481281791,
+      "n": 1500,
+      "defaults": 113,
+      "observed": 0.07533333333333334,
+      "predicted": 0.07513124077152114,
+      "ci_low": 0.0630345653666534,
+      "ci_high": 0.08980174398933195
+    },
+    {
+      "lo": 0.07983806481281791,
+      "hi": 0.08961584997514686,
+      "n": 1499,
+      "defaults": 119,
+      "observed": 0.07938625750500333,
+      "predicted": 0.08466269892303663,
+      "ci_low": 0.06675103175873498,
+      "ci_high": 0.09417184926877983
+    },
+    {
+      "lo": 0.08961584997514686,
+      "hi": 0.09999673809330158,
+      "n": 1501,
+      "defaults": 149,
+      "observed": 0.09926715522984676,
+      "predicted": 0.09490403613973887,
+      "ci_low": 0.0851474055634196,
+      "ci_high": 0.11543290800579589
+    },
+    {
+      "lo": 0.09999673809330158,
+      "hi": 0.11077450566300294,
+      "n": 1500,
+      "defaults": 173,
+      "observed": 0.11533333333333333,
+      "predicted": 0.10529473435894374,
+      "ci_low": 0.10014168311021648,
+      "ci_high": 0.13249026429701044
+    },
+    {
+      "lo": 0.11077450566300294,
+      "hi": 0.12183469889564176,
+      "n": 1500,
+      "defaults": 179,
+      "observed": 0.11933333333333333,
+      "predicted": 0.11619519768561967,
+      "ci_low": 0.10389210428322015,
+      "ci_high": 0.13671940692913093
+    },
+    {
+      "lo": 0.12183469889564176,
+      "hi": 0.132852554454868,
+      "n": 1500,
+      "defaults": 176,
+      "observed": 0.11733333333333333,
+      "predicted": 0.1272254835391761,
+      "ci_low": 0.10201614143016124,
+      "ci_high": 0.13460558787962776
+    },
+    {
+      "lo": 0.132852554454868,
+      "hi": 0.1453266606025482,
+      "n": 1500,
+      "defaults": 225,
+      "observed": 0.15,
+      "predicted": 0.1389835670100819,
+      "ci_low": 0.13282473818114968,
+      "ci_high": 0.16896342887048663
+    },
+    {
+      "lo": 0.1453266606025482,
+      "hi": 0.1586198393031389,
+      "n": 1500,
+      "defaults": 202,
+      "observed": 0.13466666666666666,
+      "predicted": 0.15177554070151114,
+      "ci_low": 0.11832121422419187,
+      "ci_high": 0.15287862490780182
+    },
+    {
+      "lo": 0.1586198393031389,
+      "hi": 0.17295320328900857,
+      "n": 1500,
+      "defaults": 258,
+      "observed": 0.172,
+      "predicted": 0.165689889666074,
+      "ci_low": 0.1537458125789728,
+      "ci_high": 0.19192995540084634
+    },
+    {
+      "lo": 0.17295320328900857,
+      "hi": 0.18819620526801972,
+      "n": 1500,
+      "defaults": 273,
+      "observed": 0.182,
+      "predicted": 0.180309748822215,
+      "ci_low": 0.16329395605766023,
+      "ci_high": 0.20233072143496933
+    },
+    {
+      "lo": 0.18819620526801972,
+      "hi": 0.2051248629750277,
+      "n": 1500,
+      "defaults": 284,
+      "observed": 0.18933333333333333,
+      "predicted": 0.19660438553931928,
+      "ci_low": 0.17030992340148873,
+      "ci_high": 0.20994395440053507
+    },
+    {
+      "lo": 0.2051248629750277,
+      "hi": 0.22407392031754472,
+      "n": 1500,
+      "defaults": 328,
+      "observed": 0.21866666666666668,
+      "predicted": 0.21432782897393182,
+      "ci_low": 0.1984817285592124,
+      "ci_high": 0.2402889504803886
+    },
+    {
+      "lo": 0.22407392031754472,
+      "hi": 0.24599543192139756,
+      "n": 1500,
+      "defaults": 379,
+      "observed": 0.25266666666666665,
+      "predicted": 0.23484461162257428,
+      "ci_low": 0.23132667694364917,
+      "ci_high": 0.2752702944395071
+    },
+    {
+      "lo": 0.24599543192139756,
+      "hi": 0.27280964114904377,
+      "n": 1500,
+      "defaults": 357,
+      "observed": 0.238,
+      "predicted": 0.2591701056487752,
+      "ci_low": 0.21713498105952844,
+      "ci_high": 0.26020358970483926
+    },
+    {
+      "lo": 0.27280964114904377,
+      "hi": 0.31198487219394805,
+      "n": 1500,
+      "defaults": 409,
+      "observed": 0.27266666666666667,
+      "predicted": 0.2905975830230232,
+      "ci_low": 0.25073185876257753,
+      "ci_high": 0.2957629316461996
+    },
+    {
+      "lo": 0.31198487219394805,
+      "hi": 0.5057609940314064,
+      "n": 1500,
+      "defaults": 533,
+      "observed": 0.35533333333333333,
+      "predicted": 0.35304650668022275,
+      "ci_low": 0.3315098012564732,
+      "ci_high": 0.3798959744582031
+    }
+  ],
+  "global_importance": {
+    "interest_rate": 0.4285982549190521,
+    "dti_ratio": 0.14486461877822876,
+    "credit_score": 0.10871852934360504,
+    "residential_status": 0.10789261758327484,
+    "debt_to_annual_income": 0.09441590309143066,
+    "loan_to_income": 0.0796256959438324,
+    "emi_to_income": 0.07765460014343262,
+    "recent_inquiries": 0.07414305210113525,
+    "active_loans": 0.07162059098482132,
+    "credit_history_years": 0.05635729804635048,
+    "employment_years": 0.051060546189546585,
+    "mortgage_accounts": 0.04757823050022125,
+    "loan_tenure_months": 0.04711621627211571,
+    "loan_purpose": 0.03803038224577904,
+    "previous_loans": 0.032644398510456085,
+    "credit_utilization": 0.03070412389934063,
+    "previous_defaults": 0.011278873309493065,
+    "delayed_payments_2y": 0.010310538113117218,
+    "bankruptcies": 0.005836694035679102
+  },
+  "shap_direction": {
+    "credit_score": -0.9545285241017749,
+    "interest_rate": 0.9469004971130589,
+    "loan_tenure_months": 0.9930616808800607,
+    "dti_ratio": 0.9673718884263751,
+    "loan_to_income": 0.9294438004108011,
+    "emi_to_income": 0.8919581032655336,
+    "debt_to_annual_income": -0.5500868401574592,
+    "credit_utilization": 0.7174923990530006,
+    "credit_history_years": -0.8338882246862704,
+    "employment_years": 0.18873679882710906,
+    "delayed_payments_2y": 0.8258228557344772,
+    "recent_inquiries": 0.9592461222176851,
+    "active_loans": 0.8669793499188926,
+    "previous_loans": 0.05954537212437678,
+    "previous_defaults": 0.7938689793346647,
+    "bankruptcies": 0.8416073815282016,
+    "mortgage_accounts": -0.8586607114788184,
+    "residential_status": null,
+    "loan_purpose": null
+  },
+  "fairness": {
+    "audit_region": {
+      "title": "US region (audit only - not a model feature)",
+      "rows": [
+        {
+          "group": "Midwest",
+          "n": 5129,
+          "actual_default_rate": 0.1493468512380581,
+          "mean_predicted": 0.15031362351819572,
+          "approval_rate": 0.852017937219731,
+          "fnr": 0.706266318537859,
+          "fpr": 0.12239284895713959,
+          "roc_auc": 0.6823811854851112,
+          "approval_ratio_vs_max": 0.987502449968926
+        },
+        {
+          "group": "Northeast",
+          "n": 6187,
+          "actual_default_rate": 0.1535477614352675,
+          "mean_predicted": 0.1492470439512838,
+          "approval_rate": 0.8567965088087927,
+          "fnr": 0.7263157894736842,
+          "fpr": 0.11953408439946535,
+          "roc_auc": 0.6850867813030762,
+          "approval_ratio_vs_max": 0.9930408910573245
+        },
+        {
+          "group": "South",
+          "n": 10554,
+          "actual_default_rate": 0.14430547659655107,
+          "mean_predicted": 0.14864846897856293,
+          "approval_rate": 0.8628008338070874,
+          "fnr": 0.7340774786605384,
+          "fpr": 0.11549108625844313,
+          "roc_auc": 0.6723771836309356,
+          "approval_ratio_vs_max": 1.0
+        },
+        {
+          "group": "West",
+          "n": 8130,
+          "actual_default_rate": 0.15018450184501844,
+          "mean_predicted": 0.1510060532650793,
+          "approval_rate": 0.8565805658056581,
+          "fnr": 0.7067977067977068,
+          "fpr": 0.11694890722246346,
+          "roc_auc": 0.7016041818473431,
+          "approval_ratio_vs_max": 0.9927906096543944
+        }
+      ]
+    },
+    "residential_status": {
+      "title": "Residential status",
+      "rows": [
+        {
+          "group": "Mortgaged",
+          "n": 14422,
+          "actual_default_rate": 0.12619608930800166,
+          "mean_predicted": 0.12986278810622734,
+          "approval_rate": 0.9037581472749965,
+          "fnr": 0.7901098901098901,
+          "fpr": 0.07982859863513728,
+          "roc_auc": 0.6949952780912152,
+          "approval_ratio_vs_max": 1.0
+        },
+        {
+          "group": "Owned",
+          "n": 3022,
+          "actual_default_rate": 0.15751158173395102,
+          "mean_predicted": 0.15205427506334443,
+          "approval_rate": 0.8540701522170748,
+          "fnr": 0.7436974789915967,
+          "fpr": 0.12529457973291439,
+          "roc_auc": 0.6554968413131159,
+          "approval_ratio_vs_max": 0.9450206947425698
+        },
+        {
+          "group": "Rented",
+          "n": 12549,
+          "actual_default_rate": 0.17228464419475656,
+          "mean_predicted": 0.17192058255271442,
+          "approval_rate": 0.8063590724360507,
+          "fnr": 0.6558741905642923,
+          "fpr": 0.16231828246847022,
+          "roc_auc": 0.6696806083745007,
+          "approval_ratio_vs_max": 0.8922288278865063
+        }
+      ]
+    },
+    "income_band": {
+      "title": "Income quartile",
+      "rows": [
+        {
+          "group": "Q1 (lowest)",
+          "n": 7549,
+          "actual_default_rate": 0.1906212743409723,
+          "mean_predicted": 0.17606709239314614,
+          "approval_rate": 0.7970592131408134,
+          "fnr": 0.6838082001389854,
+          "fpr": 0.1762684124386252,
+          "roc_auc": 0.639433014607116,
+          "approval_ratio_vs_max": 0.8635872436039869
+        },
+        {
+          "group": "Q2",
+          "n": 7451,
+          "actual_default_rate": 0.15407327875452959,
+          "mean_predicted": 0.15908801243335982,
+          "approval_rate": 0.8382767413769964,
+          "fnr": 0.6698606271777003,
+          "fpr": 0.13104870696493734,
+          "roc_auc": 0.683867009847089,
+          "approval_ratio_vs_max": 0.9082450695356299
+        },
+        {
+          "group": "Q3",
+          "n": 7562,
+          "actual_default_rate": 0.1379264744776514,
+          "mean_predicted": 0.14334498262336898,
+          "approval_rate": 0.8745040994445914,
+          "fnr": 0.7497603068072867,
+          "fpr": 0.1055376591501764,
+          "roc_auc": 0.6920759099774286,
+          "approval_ratio_vs_max": 0.9474962114594131
+        },
+        {
+          "group": "Q4 (highest)",
+          "n": 7438,
+          "actual_default_rate": 0.11158913686474858,
+          "mean_predicted": 0.11997783959149315,
+          "approval_rate": 0.9229631621403603,
+          "fnr": 0.8156626506024096,
+          "fpr": 0.0635593220338983,
+          "roc_auc": 0.6972069269815339,
+          "approval_ratio_vs_max": 1.0
+        }
+      ]
+    },
+    "employment_band": {
+      "title": "Employment length",
+      "rows": [
+        {
+          "group": "<2 yrs",
+          "n": 4518,
+          "actual_default_rate": 0.1454183266932271,
+          "mean_predicted": 0.15078903428196191,
+          "approval_rate": 0.8561310314298363,
+          "fnr": 0.7016742770167428,
+          "fpr": 0.11758611758611759,
+          "roc_auc": 0.702067310895317,
+          "approval_ratio_vs_max": 0.9735521391181021
+        },
+        {
+          "group": "2-4 yrs",
+          "n": 6913,
+          "actual_default_rate": 0.1488499927672501,
+          "mean_predicted": 0.14843342101771706,
+          "approval_rate": 0.86778533198322,
+          "fnr": 0.7395529640427599,
+          "fpr": 0.10978925900747791,
+          "roc_auc": 0.6903455467843154,
+          "approval_ratio_vs_max": 0.986804864246781
+        },
+        {
+          "group": "5-9 yrs",
+          "n": 7487,
+          "actual_default_rate": 0.15319887805529583,
+          "mean_predicted": 0.15492177936788254,
+          "approval_rate": 0.8446640844129825,
+          "fnr": 0.6939843068875327,
+          "fpr": 0.1280757097791798,
+          "roc_auc": 0.6826774138542736,
+          "approval_ratio_vs_max": 0.9605124636623866
+        },
+        {
+          "group": "10+ yrs",
+          "n": 9427,
+          "actual_default_rate": 0.13461334464835048,
+          "mean_predicted": 0.14172551966699615,
+          "approval_rate": 0.8793889890739366,
+          "fnr": 0.7549251379038613,
+          "fpr": 0.10125030644765874,
+          "roc_auc": 0.6786906199100469,
+          "approval_ratio_vs_max": 1.0
+        }
+      ]
+    }
+  },
+  "runtime_seconds": 246.5
+}

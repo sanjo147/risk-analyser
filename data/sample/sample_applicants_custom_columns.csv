@@ -1,0 +1,41 @@
+Cust_No,Age,Marital Status,Dependents,Residential Status,Employment Type,Employer Category,Years of Employment,Net Salary,Additional Income,Employment Stability,Monthly Expenses,Existing EMI,Number of Active Loans,Bank Balance,Savings,CIBIL,Number of Previous Loans,Previous Defaults,Delayed Payments (2 yrs),Credit Inquiries (6 months),Credit Utilization (%),Outstanding Debt,Credit History (years),Amt Requested,Tenor,ROI,Loan Purpose,Expected EMI
+LA1001,40,Married,3,Owned,Salaried,Manufacturing,19.9,118200.0,6800.0,Stable,64900.0,0.0,4,117700.0,170300.0,718.0,9,1,1,1,32.6,306800.0,16.7,200000.0,36,13.38,education,6775.0
+LA1002,56,Divorced,3,Other,Self-employed,Retail trade,8.3,91200.0,0.0,Moderate,57100.0,0.0,4,466800.0,0.0,725.0,21,0,1,0,41.6,141600.0,32.5,220000.0,48,15.16,other,6141.0
+LA1003,51,Single,0,Rented,Salaried,IT / Software,6.2,51400.0,0.0,Stable,27000.0,0.0,3,191800.0,0.0,696.0,14,0,1,0,69.8,229200.0,25.4,150000.0,60,11.49,small_business,3298.0
+LA1004,32,Married,4,Owned,Salaried,Government,8.7,81800.0,0.0,Stable,32200.0,0.0,1,207800.0,356700.0,757.0,30,0,0,0,12.0,203400.0,8.7,220000.0,36,10.57,small_business,7158.0
+LA1005,45,Single,3,Rented,Salaried,Banking & Finance,1.3,22100.0,0.0,Stable,7400.0,0.0,2,108000.0,102000.0,674.0,10,0,1,2,52.4,9500.0,17.3,70000.0,48,15.0,education,1948.0
+LA1006,57,Single,2,Other,Self-employed,Transport,14.5,47600.0,0.0,Unstable,20100.0,3200.0,6,282800.0,110900.0,,14,0,0,0,37.4,25100.0,29.9,240000.0,36,10.84,major_purchase,7839.0
+LA1007,59,Single,2,Mortgaged,Business,Hospitality,4.6,63200.0,0.0,Stable,34300.0,0.0,5,359600.0,203100.0,787.0,30,0,0,1,53.1,221500.0,37.9,90000.0,36,14.29,home_improvement,3089.0
+LA1008,34,Single,3,Owned,Salaried,Retail,2.3,54700.0,0.0,Stable,31000.0,0.0,3,227000.0,246700.0,695.0,25,1,0,1,46.6,128100.0,11.6,160000.0,36,12.24,credit_card,5333.0
+LA1009,34,Single,2,Owned,Self-employed,Construction,7.5,169800.0,0.0,Moderate,70500.0,39500.0,4,332000.0,454500.0,720.0,5,0,0,0,17.3,99400.0,5.4,170000.0,48,12.47,credit_card,4516.0
+LA1010,24,Widowed,4,Mortgaged,Salaried,Healthcare,4.0,65200.0,0.0,Unstable,30300.0,16200.0,4,389100.0,189200.0,658.0,32,1,0,0,61.3,275800.0,2.7,100000.0,36,14.5,major_purchase,3442.0
+LA1011,52,Single,2,Rented,Business,Professional services,17.1,67300.0,0.0,Unstable,16400.0,12700.0,6,289700.0,415400.0,672.0,6,0,0,2,64.0,372900.0,24.4,140000.0,36,16.79,other,4977.0
+LA1012,33,Married,1,Mortgaged,Business,Retail trade,13.0,26500.0,0.0,Stable,10600.0,4000.0,6,151400.0,189400.0,794.0,9,0,0,0,25.0,47400.0,7.2,130000.0,60,10.05,car,2765.0
+LA1013,36,Married,0,Mortgaged,Self-employed,Professional services,0.6,49600.0,0.0,Stable,29300.0,8300.0,2,54700.0,50900.0,646.0,17,0,0,0,43.7,138200.0,7.7,220000.0,36,13.9,other,7508.0
+LA1014,37,Married,4,Rented,Self-employed,Agriculture,2.3,35700.0,0.0,Moderate,14300.0,10100.0,6,152600.0,42700.0,733.0,6,0,0,0,13.0,164900.0,12.2,40000.0,36,13.8,small_business,1363.0
+LA1015,25,Married,4,Mortgaged,Salaried,IT / Software,4.6,200200.0,0.0,Moderate,94300.0,0.0,3,1168800.0,1696200.0,758.0,3,0,1,2,41.0,429200.0,3.2,780000.0,36,9.32,major_purchase,24920.0
+LA1016,26,Married,0,Mortgaged,Self-employed,Transport,5.8,43800.0,0.0,Stable,22900.0,0.0,1,21000.0,137200.0,509.0,20,0,0,1,93.5,317000.0,1.2,60000.0,48,23.38,other,1936.0
+LA1017,45,Single,0,Other,Salaried,Manufacturing,7.9,58700.0,0.0,Stable,30200.0,11500.0,3,178800.0,323900.0,651.0,3,0,1,0,79.5,215500.0,18.0,180000.0,36,18.81,car,6581.0
+LA1018,39,Single,3,Owned,Salaried,Retail,3.1,,0.0,Stable,45900.0,0.0,5,34000.0,357700.0,683.0,30,0,1,1,62.3,314600.0,16.7,270000.0,36,12.42,education,9022.0
+LA1019,35,Single,1,Mortgaged,Salaried,Banking & Finance,7.8,78900.0,0.0,Moderate,27500.0,11300.0,8,126200.0,85700.0,667.0,25,0,0,3,44.4,150300.0,11.6,340000.0,36,15.86,education,11930.0
+LA1020,53,Single,2,Owned,Salaried,Manufacturing,2.7,25300.0,5600.0,Stable,4000.0,6300.0,6,46000.0,115500.0,687.0,9,0,1,0,34.9,16000.0,29.6,80000.0,60,14.24,car,1871.0
+LA1021,30,Married,1,Mortgaged,Salaried,IT / Software,6.0,78100.0,0.0,Moderate,21600.0,13400.0,7,299800.0,10400.0,713.0,24,0,0,2,45.0,228400.0,1.9,310000.0,36,13.18,credit_card,10472.0
+LA1022,38,Single,4,Rented,Salaried,Retail,16.0,81300.0,8600.0,Stable,30800.0,12600.0,7,267700.0,146000.0,673.0,32,1,1,0,65.6,296600.0,14.4,320000.0,24,13.89,debt_consolidation,15347.0
+LA1023,34,Married,4,Rented,Self-employed,Agriculture,11.4,49800.0,0.0,Stable,25000.0,0.0,3,189000.0,197500.0,707.0,21,0,2,2,67.9,76100.0,12.8,230000.0,36,16.52,education,8145.0
+LA1024,41,Married,2,Owned,Salaried,Manufacturing,8.2,71000.0,0.0,Stable,31300.0,16400.0,7,182500.0,131600.0,631.0,24,0,2,1,52.0,234400.0,12.9,260000.0,60,95.0,debt_consolidation,7003.0
+LA1025,27,Married,3,Rented,Salaried,Government,7.0,58300.0,0.0,Stable,32300.0,12500.0,5,206500.0,184300.0,864.0,8,0,0,0,30.9,38100.0,0.5,210000.0,36,8.5,wedding,6629.0
+LA1026,61,Married,3,Owned,Salaried,Manufacturing,1.9,25700.0,3300.0,Stable,6900.0,1200.0,8,45300.0,154100.0,784.0,25,0,0,0,24.4,0.0,34.1,60000.0,36,8.5,home_improvement,1894.0
+LA1027,33,Married,2,Mortgaged,Salaried,Manufacturing,4.9,40300.0,3800.0,Stable,8200.0,0.0,3,114700.0,140100.0,771.0,24,0,0,0,25.0,39600.0,11.0,120000.0,24,12.36,debt_consolidation,5669.0
+LA1028,30,Married,1,Rented,Salaried,Education,7.4,55600.0,0.0,Unstable,27100.0,10300.0,4,302500.0,274700.0,688.0,31,1,1,1,17.9,0.0,4.2,80000.0,60,17.46,debt_consolidation,2008.0
+LA1029,49,Divorced,0,Owned,Salaried,Banking & Finance,3.9,39800.0,0.0,Unstable,25100.0,0.0,5,106700.0,66400.0,684.0,26,0,3,3,46.5,102700.0,20.8,170000.0,36,13.77,debt_consolidation,5791.0
+LA1030,43,Single,1,Rented,Salaried,Healthcare,3.8,74000.0,0.0,Stable,32600.0,0.0,5,442800.0,403800.0,835.0,33,0,0,0,18.9,41400.0,15.8,90000.0,60,8.5,small_business,1846.0
+LA1031,51,Married,0,Owned,Salaried,Education,1.6,95400.0,27200.0,Moderate,33500.0,14500.0,9,444900.0,0.0,682.0,27,0,0,1,63.4,474900.0,23.1,810000.0,60,14.56,home_improvement,19083.0
+LA1032,61,Married,3,Rented,Business,Hospitality,14.4,63900.0,8400.0,Moderate,33400.0,0.0,5,349600.0,595400.0,790.0,8,0,0,0,,,37.0,170000.0,60,8.5,major_purchase,3488.0
+LA1033,49,Single,2,Rented,Self-employed,Retail trade,2.8,44800.0,0.0,Stable,26200.0,10200.0,3,176100.0,334500.0,731.0,21,0,0,0,34.9,36200.0,20.1,120000.0,48,14.48,medical,3308.0
+LA1034,41,Married,1,Owned,Salaried,Manufacturing,2.6,116400.0,0.0,Stable,31500.0,24300.0,4,604500.0,31100.0,674.0,31,0,0,2,54.5,500700.0,19.1,570000.0,36,14.57,education,19639.0
+LA1035,34,Single,4,Rented,Salaried,Government,6.6,59300.0,0.0,Moderate,22300.0,14100.0,7,185900.0,75400.0,655.0,16,0,2,1,55.2,236900.0,8.9,210000.0,24,19.28,home_improvement,10614.0
+LA1036,45,Single,1,Owned,Business,Agriculture,9.7,66800.0,0.0,Moderate,35900.0,8100.0,8,187300.0,392700.0,679.0,21,1,1,0,66.3,157500.0,16.7,180000.0,36,15.47,wedding,6281.0
+LA1037,58,Married,0,Rented,Salaried,Retail,3.4,36100.0,0.0,Moderate,16100.0,6200.0,6,73000.0,0.0,668.0,12,0,1,2,69.5,210200.0,30.4,170000.0,24,16.89,major_purchase,8396.0
+LA1038,43,Divorced,2,Rented,Salaried,Retail,3.2,48800.0,0.0,Stable,15700.0,8100.0,7,252300.0,213600.0,627.0,33,0,0,4,80.4,139000.0,18.0,640000.0,60,18.51,wedding,16430.0
+LA1039,44,Married,3,Owned,Business,Retail trade,9.1,95200.0,0.0,Stable,36300.0,15000.0,6,160000.0,547800.0,757.0,19,0,0,1,34.4,333100.0,18.7,310000.0,60,10.81,credit_card,6711.0
+LA1040,26,Married,3,Owned,Salaried,Manufacturing,3.7,82800.0,0.0,Stable,25700.0,900.0,8,445000.0,103800.0,658.0,4,0,0,3,68.1,381800.0,0.5,180000.0,48,14.02,home_improvement,4921.0
